@@ -3,7 +3,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f2f2f2;
   color: #626262;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 * {
@@ -19,19 +19,23 @@ body {
 
 .title {
   color: #141414;
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .input {
-  padding: 20px 25px;
+  padding: 10px 15px;
   background-color: #eff3f6;
-  color: #c6d7e1;
-  font-size: 22px;
+  font-size: 20px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #dce5e9;
 }
 
 .block {
@@ -42,6 +46,20 @@ body {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 20px 30px;
   margin-bottom: 30px;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 10px 30px;
+  font-size: 22px;
+  border: none;
+  color: #fff;
+  background-color: #2686DF;
 }
