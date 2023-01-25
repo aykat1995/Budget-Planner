@@ -1,0 +1,39 @@
+.main__title {
+  display: block;
+  text-align: center;
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.income__title {
+  margin-right: 30px;
+}
+.income__input {
+  display: inline-block;
+}
+
+.expenses__wrapp {
+  max-width: 500px;
+  min-height: 500px;
+}
+
+.bank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 500px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bank__sum {
+  padding: 20px;
+  width: 200px;
+  background-color: #abd15b;
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */

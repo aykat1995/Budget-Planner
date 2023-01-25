@@ -1,0 +1,14 @@
+.c-expense__wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-expense__title {
+  margin-right: 40px;
+}/*# sourceMappingURL=expense.css.map */
