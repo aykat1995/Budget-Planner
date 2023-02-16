@@ -7,7 +7,6 @@ export default function MainPage() {
 
   let [income, setIncome] = useState(0); // доходы
   let [expenses, setExpenses] = useState(0); //расходы
-  let expensesNumber = 3; // количество расходов по умолчанию
 
   let [expensesList, setExpensesList] = useState([
     {
@@ -33,7 +32,7 @@ export default function MainPage() {
         expensesSum += Number(input.value);
         setExpenses(expensesSum);
     });
-  },[expenses])
+  },[expenses, expensesList])
 
 // Добавление дохода
   function increaseIncome() {
@@ -64,9 +63,11 @@ export default function MainPage() {
     ])
   }
 
-  function deleteExpense(e) {
-    if (e.target.tagName == 'IMG') console.log(e);
-    else console.log('Nope');
+  function deleteExpense(e, id) {
+    if (e.target.tagName === 'IMG') {
+      setExpensesList(expensesList.filter(exp => exp.id !== id));
+    }
+    else return;
   }
 
   return <>
@@ -76,7 +77,7 @@ export default function MainPage() {
       <div className="income block">
         <div className="month-wrapp">
           <h3 className="income__title title">Доход на месяц</h3>
-          <input type="month" name="month" id="month" value="2023-01" className="month__input" autoComplete="true"/>
+          <input type="month" name="month" id="month" className="month__input" autoComplete="true"/>
         </div>
         <div className="income__sum">
           <input type="text" defaultValue="" className="income__input" placeholder="Введите сумму"/>
@@ -92,8 +93,8 @@ export default function MainPage() {
         </div>        
         <div className="expenses__wrapp">
           {
-             expensesList.map((item, index) => (
-              <ExpenseItem setExpenses={setExpenses} deleteExpense={deleteExpense} key={index} title={item.name}/>
+             expensesList.map((item) => (
+              <ExpenseItem setExpenses={setExpenses} deleteExpense={deleteExpense} key={item.id} id={item.id} title={item.name}/>
             ))
           }
         </div>
