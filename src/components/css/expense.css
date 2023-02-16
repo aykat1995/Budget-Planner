@@ -13,4 +13,8 @@
 .c-expense__title {
   margin-right: 30px;
   font-size: 20px;
+}
+.c-expense__minus {
+  width: 15px;
+  cursor: pointer;
 }/*# sourceMappingURL=expense.css.map */
